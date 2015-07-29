@@ -7,7 +7,7 @@ public class AcentuacaoParaRegex {
 
 	public static String converter(String original)
 	{
-		final String regexA = "[AaÃãÁáÀà]";
+		final String regexA = "[AaÃãÁáÀà]"; 
 		final String regexE = "[EeÉéÈè]";
 		final String regexI = "[IiÍíÌì]";
 		final String regexO = "[OoÕõÓóÒò]";
