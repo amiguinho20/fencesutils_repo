@@ -11,7 +11,7 @@ public class JsonParaErro {
 	public static Erro converter(String json)
 	{
 		Erro erro = new Erro();
-		if (Verificador.isValorado(json))
+		if (Verificador.isValorado(json)) 
 		{
 			Gson gson = new GsonBuilder().create();
 			erro = gson.fromJson(json, Erro.class);
