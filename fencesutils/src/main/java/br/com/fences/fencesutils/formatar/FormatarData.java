@@ -2,6 +2,7 @@ package br.com.fences.fencesutils.formatar;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class FormatarData {
 	
@@ -63,4 +64,9 @@ public class FormatarData {
 		return tipo05;
 	}
 	
+	public static String dataHoraCorrente()
+	{
+		String ultimaAtualizacao = getAnoMesDiaHoraMinutoSegundoConcatenados().format(new Date());
+		return ultimaAtualizacao; 
+	}
 }

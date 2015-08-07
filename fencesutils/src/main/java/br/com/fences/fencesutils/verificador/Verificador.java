@@ -15,6 +15,23 @@ public class Verificador {
 		return ret;
 	}
 	
+	/**
+	 * Retorna 'true' quando todos os argumentos possuirem valor.
+	 */
+	public static boolean isValorado(String... args)
+	{
+		boolean ret = true;
+		for (String arg : args)
+		{
+			if (!isValorado(arg))
+			{
+				ret = false;
+				break;
+			}
+		}
+		return ret;
+	}
+	
 	public static boolean isValorado(final Collection<?> arg)
 	{
 		boolean ret = true;
