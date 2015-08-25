@@ -1,0 +1,13 @@
+br/com/fences/fencesutils/dao/DaoUtil.class
+br/com/fences/fencesutils/rest/tratamentoerro/bind/ExceptionMapperImpl.class
+br/com/fences/fencesutils/rest/tratamentoerro/util/VerificarErro.class
+br/com/fences/fencesutils/formatar/FormatarData.class
+br/com/fences/fencesutils/rest/tratamentoerro/entidade/Erro.class
+br/com/fences/fencesutils/conversor/JsonParaErro.class
+br/com/fences/fencesutils/conversor/converter/ColecaoJsonAdapter.class
+br/com/fences/fencesutils/conversor/AcentuacaoParaRegex.class
+br/com/fences/fencesutils/verificador/Verificador.class
+br/com/fences/fencesutils/conversor/converter/Converter.class
+br/com/fences/fencesutils/rest/tratamentoerro/exception/RestException.class
+br/com/fences/fencesutils/rest/tratamentoerro/exception/RestRuntimeException.class
+br/com/fences/fencesutils/conversor/InputStreamParaJson.class

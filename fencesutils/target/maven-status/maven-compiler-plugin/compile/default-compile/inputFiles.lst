@@ -4,8 +4,10 @@
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/dao/DaoUtil.java
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/conversor/JsonParaErro.java
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/conversor/AcentuacaoParaRegex.java
+/Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/conversor/converter/Converter.java
+/Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/rest/tratamentoerro/util/VerificarErro.java
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/formatar/FormatarData.java
-/Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/conversor/mongodb/Converter.java
+/Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/conversor/converter/ColecaoJsonAdapter.java
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/rest/tratamentoerro/entidade/Erro.java
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/verificador/Verificador.java
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/conversor/InputStreamParaJson.java

@@ -1,6 +1,14 @@
-package br.com.fences.fencesutils.conversor.mongodb;
+package br.com.fences.fencesutils.conversor.converter;
+
+import java.lang.reflect.Modifier;
+import java.lang.reflect.Type;
+import java.util.Collection;
 
 import org.bson.Document;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 
 /**
  * Conversao para o documento do MongoDB
@@ -8,8 +16,60 @@ import org.bson.Document;
  */
 public abstract class Converter<T> {
 
-	public abstract Document paraDocumento(T obj);
-	public abstract T paraObjeto(Document doc);
+	protected Gson gson = new GsonBuilder()
+			.registerTypeHierarchyAdapter(Collection.class, new ColecaoJsonAdapter())
+			.create();
+	
+	protected Gson gsonComTransient = new GsonBuilder()
+		    .excludeFieldsWithModifiers(Modifier.STATIC, Modifier.VOLATILE)
+		    .registerTypeHierarchyAdapter(Collection.class, new ColecaoJsonAdapter())
+		    .create();
+	
+//	public abstract Document paraDocumento(T obj);
+//	public abstract T paraObjeto(Document doc);
+//	public abstract String paraJson(T obj);
+//	public abstract String paraJson(Collection<T> obj);
+//	public abstract T paraObjeto(String json);
+	
+	public Document paraDocumento(T obj) 
+	{
+    	String json = gson.toJson(obj);
+    	String jsonMongoDB = transformarIdParaJsonDb(json);
+    	Document documento = Document.parse(jsonMongoDB);
+		return documento;
+	}
+
+	public T paraObjeto(Document doc, Class<T> clazz) 
+	{
+		String jsonMongoDB = doc.toJson();
+    	String json = transformarIdParaJsonObj(jsonMongoDB);
+    	T obj = (T) gson.fromJson(json, clazz);
+    	return obj;
+	}
+	
+	public Collection<T> paraObjeto(String json, Type tipo)
+	{
+		Collection<T> ret = gsonComTransient.fromJson(json, tipo);
+		return ret;
+	}
+	
+	public String paraJson(T obj)
+	{
+		String json = gsonComTransient.toJson(obj);
+		return json;
+	}
+
+	public String paraJson(Collection<T> obj) {
+		String json = gsonComTransient.toJson(obj);
+		return json;
+	}
+
+	public T paraObjeto(String json, Class<T> clazz)
+	{
+		T ret = (T) gsonComTransient.fromJson(json, clazz);
+		return ret;
+	}
+
 	
 	/**
 	 * Quando for recuperar o JSON do MongoDB para obj...
