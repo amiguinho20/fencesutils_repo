@@ -14,12 +14,15 @@ public class AcentuacaoParaRegex {
 		final String regexU = "[UuÚúÙù]";
 		final String regexC = "[CcÇç]";
 		final String regexN = "[NnÑñ]";
-		final String regexWildcardAsterisco = ".*"; //qualquer coisa zero ou mais vezes
-		final String regexWildcardInterrogacao = ".?"; //qualquer coisa zero ou uma vez
+//		final String regexWildcardAsterisco = ".*"; //qualquer coisa zero ou mais vezes
+//		final String regexWildcardInterrogacao = ".?"; //qualquer coisa zero ou uma vez
 		
+//		List<String> regexs = Arrays.asList(regexA, regexE, regexI, regexO,
+//				regexU, regexC, regexN, regexWildcardAsterisco,
+//				regexWildcardInterrogacao);
+
 		List<String> regexs = Arrays.asList(regexA, regexE, regexI, regexO,
-				regexU, regexC, regexN, regexWildcardAsterisco,
-				regexWildcardInterrogacao);
+				regexU, regexC, regexN);
 		
 		StringBuilder convertida = new StringBuilder();
 		for (char letra : original.toCharArray())
@@ -42,7 +45,12 @@ public class AcentuacaoParaRegex {
 				convertida.append(regexEncontrada);
 			}
 		}
-		return convertida.toString();
+		
+		String retorno = convertida.toString();
+		retorno = retorno.replaceAll("\\?", ".{1}"); //-- interrogacao por 'qualquer coisa UMA VEZ'
+		retorno = retorno.replaceAll("\\*", ".+");   //-- asterisco por 'qualquer coisa UMA OU MAIS VEZES'
+		
+		return retorno;
 	}
 	
 	
