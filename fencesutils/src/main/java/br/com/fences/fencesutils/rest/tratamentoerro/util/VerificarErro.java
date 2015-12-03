@@ -28,7 +28,7 @@ public class VerificarErro implements Serializable{
 	public boolean contemErro(Response response, String json)
 	{
 		boolean contem = false;
-		if (response.getStatus() < HTTP_OK && response.getStatus() > HTTP_IM_USED)
+		if (response.getStatus() < HTTP_OK || response.getStatus() > HTTP_IM_USED)
 		{
 			contem = true;
 		}

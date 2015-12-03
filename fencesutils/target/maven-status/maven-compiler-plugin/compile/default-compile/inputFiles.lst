@@ -11,11 +11,14 @@
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/conversor/InputStreamParaJson.java
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/filtrocustom/ArvoreSimples.java
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/filtrocustom/TipoFiltro.java
+/Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/conversor/ExcecaoParaMessageHtml.java
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/constante/EstadoProcessamento.java
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/conversor/JsonParaErro.java
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/conversor/converter/Converter.java
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/rest/tratamentoerro/util/VerificarErro.java
+/Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/verificador/VerificadorDocumento.java
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/formatar/FormatarData.java
+/Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/conversor/Capitalizar.java
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/conversor/converter/ColecaoJsonAdapter.java
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/rest/tratamentoerro/entidade/Erro.java
 /Users/Amiguinho/git/fencesutils_repo/fencesutils/src/main/java/br/com/fences/fencesutils/verificador/Verificador.java
