@@ -70,6 +70,19 @@ public abstract class Converter<T> {
 		return ret;
 	}
 
+	public T paraObjetoTratantoId(String json, Class<T> clazz)
+	{
+		json = transformarIdParaJsonObj(json);
+		T obj = (T) gson.fromJson(json, clazz);
+		return obj;
+	}
+	
+	public String paraJsonTratandoId(T obj)
+	{
+		String json = gson.toJson(obj);
+		String jsonMongoDB = transformarIdParaJsonDb(json);
+		return jsonMongoDB;
+	}
 	
 	/**
 	 * Quando for recuperar o JSON do MongoDB para obj...

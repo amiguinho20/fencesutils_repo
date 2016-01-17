@@ -5,6 +5,14 @@
 	<artifactId>fencesutils</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>fencesutils</name>
+	<repositories>
+		<repository>
+			<id>prime-repo</id>
+			<name>PrimeFaces Maven Repository</name>
+			<url>http://repository.primefaces.org</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>	
 	<dependencies>
 		<dependency>
 			<groupId>javax</groupId>
@@ -12,6 +20,11 @@
 			<version>7.0</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.10</version>
+		</dependency>		
 		<dependency>
 			<groupId>org.mongodb</groupId>
 			<artifactId>mongodb-driver</artifactId>
